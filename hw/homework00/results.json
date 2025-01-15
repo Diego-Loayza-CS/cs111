@@ -1,0 +1,109 @@
+{
+    "tests": [
+        {
+            "score": 4.0,
+            "max_score": 4.0,
+            "name": "test_homework0.py::test_1_person_35_tip[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 4.0,
+            "max_score": 4.0,
+            "name": "test_homework0.py::test_3_person_80_tip[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 4.0,
+            "max_score": 4.0,
+            "name": "test_homework0.py::test_4_person_35_tip[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 4.0,
+            "max_score": 4.0,
+            "name": "test_homework0.py::test_7_person_80_tip[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 4.0,
+            "max_score": 4.0,
+            "name": "test_homework0.py::test_8_person_80_tip[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_homework0.py::test_10_person_35_tip[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_homework0.py::test_11_person_10_tip[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_homework0.py::test_12_person_80_tip[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_homework0.py::test_13_person_80_tip[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_homework0.py::test_14_person_10_tip[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 5.0,
+            "max_score": 5.0,
+            "name": "test_homework0.py::test_16_person_80_tip_doubled[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 5.0,
+            "max_score": 5.0,
+            "name": "test_homework0.py::test_100_person_80_tip_doubled[stdout]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 0,
+            "max_score": 0,
+            "name": "test_homework0.py::test_doubled_clean",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.59,
+            "max_score": 5.0,
+            "name": "test_homework0.py::test_15_person_35_tip_doubled[stdout]",
+            "output": "\ngroup_name = 'stdout'\n\n    def new_func(group_name):\n        group_stat = group_stats[group_name]\n        if not group_stat['passed']:\n>           assert group_stat['observed'] == group_stat['expected']\nE           assert Observed (left) == Expected (right)\nE             Please enter how many guests to order for:15                                  |                                                                              \nE             1 large pizzas, 0 medium pizzas, and 0 small pizzas will be needed.           | 15                                                                           \nE                                                                                           | 1 large pizzas, 0 medium pizzas, and 1 small pizzas will be needed.          \nE             A total of 2513.27 square inches of pizza will be ordered (167.55 per guest). |                                                                              \nE             Please enter the tip as a percentage (i.e. 10 means 10%):35                   | A total of 3418.05 square inches of pizza will be ordered (227.87 per guest).\nE             The total cost of the event will be: $39.64.                                  |                                                                              \nE                                                                                           | 35                                                                           \nE                                                                                           | The total cost of the event will be: $59.29.\n\nC:\\Users\\dloay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\byu_pytest_utils\\dialog.py:29: AssertionError",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.48,
+            "max_score": 5.0,
+            "name": "test_homework0.py::test_17_person_10_tip_doubled[stdout]",
+            "output": "\ngroup_name = 'stdout'\n\n    def new_func(group_name):\n        group_stat = group_stats[group_name]\n        if not group_stat['passed']:\n>           assert group_stat['observed'] == group_stat['expected']\nE           assert Observed (left) == Expected (right)\nE             Please enter how many guests to order for:17                                  |                                                                              \nE             1 large pizzas, 0 medium pizzas, and 1 small pizzas will be needed.           | 17                                                                           \nE                                                                                           | 1 large pizzas, 0 medium pizzas, and 2 small pizzas will be needed.          \nE             A total of 3418.05 square inches of pizza will be ordered (201.06 per guest). |                                                                              \nE             Please enter the tip as a percentage (i.e. 10 means 10%):10                   | A total of 4322.83 square inches of pizza will be ordered (254.28 per guest).\nE             The total cost of the event will be: $48.31.                                  |                                                                              \nE                                                                                           | 10                                                                           \nE                                                                                           | The total cost of the event will be: $64.33.\n\nC:\\Users\\dloay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\byu_pytest_utils\\dialog.py:29: AssertionError",
+            "visibility": "visible"
+        }
+    ]
+}
