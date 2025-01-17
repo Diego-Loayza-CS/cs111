@@ -9,10 +9,6 @@ DIAMETER_LARGE = 20
 DIAMETER_MEDIUM = 16
 DIAMETER_SMALL = 12
 
-RADIUS_LARGE = DIAMETER_LARGE // 2
-RADIUS_MEDIUM = DIAMETER_MEDIUM // 2
-RADIUS_SMALL = DIAMETER_SMALL // 2
-
 LARGE_PRICE = 14.68
 MEDIUM_PRICE = 11.48
 SMALL_PRICE = 7.28
@@ -36,8 +32,13 @@ def main():
     large_pizzas = guests // PEOPLE_PER_LARGE
     medium_pizzas = (guests % PEOPLE_PER_LARGE) // PEOPLE_PER_MEDIUM
     small_pizzas = ((guests % PEOPLE_PER_LARGE) % PEOPLE_PER_MEDIUM) // PEOPLE_PER_SMALL
-    total_square_inches = PI * ((large_pizzas * RADIUS_LARGE ** 2) + (medium_pizzas * RADIUS_MEDIUM ** 2) + (
-            small_pizzas * RADIUS_SMALL ** 2))
+    if ((guests % PEOPLE_PER_LARGE) % PEOPLE_PER_MEDIUM) % PEOPLE_PER_SMALL != 0:
+        small_pizzas = small_pizzas + 1
+
+    total_square_inches = PI * (
+            (large_pizzas * (DIAMETER_LARGE / 2) ** 2) + (medium_pizzas * (DIAMETER_MEDIUM / 2) ** 2) + (
+            small_pizzas * (DIAMETER_SMALL / 2) ** 2))
+
     individual_square_inches = total_square_inches / guests
 
     # Print order details
