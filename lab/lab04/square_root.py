@@ -22,8 +22,6 @@ def square_root(num):
             low = middle
 
         iteration_count += 1
-        print(f"DEBUG: Iteration num {iteration_count}")
-
     return round(middle, 4), iteration_count
 
 

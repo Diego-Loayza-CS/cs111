@@ -8,24 +8,24 @@
             "visibility": "visible"
         },
         {
-            "score": 10,
-            "max_score": 10,
-            "name": "test_square_root.py::test_square_root",
-            "output": "DEBUG: Iteration num 1\nDEBUG: Iteration num 2\nDEBUG: Iteration num 3\nDEBUG: Iteration num 4\nDEBUG: Iteration num 5\nDEBUG: Iteration num 6\nDEBUG: Iteration num 7\nDEBUG: Iteration num 8\nDEBUG: Iteration num 9\nDEBUG: Iteration num 10\nDEBUG: Iteration num 11\nDEBUG: Iteration num 12\nDEBUG: Iteration num 13\nDEBUG: Iteration num 14\nDEBUG: Iteration num 15\nDEBUG: Iteration num 16\nDEBUG: Iteration num 17\nDEBUG: Iteration num 18\nDEBUG: Iteration num 19\nDEBUG: Iteration num 20\nDEBUG: Iteration num 21\nDEBUG: Iteration num 22\nDEBUG: Iteration num 23\n(2.6458, 23)\nDEBUG: Iteration num 1\nDEBUG: Iteration num 2\nDEBUG: Iteration num 3\nDEBUG: Iteration num 4\nDEBUG: Iteration num 5\nDEBUG: Iteration num 6\nDEBUG: Iteration num 7\nDEBUG: Iteration num 8\nDEBUG: Iteration num 9\nDEBUG: Iteration num 10\nDEBUG: Iteration num 11\nDEBUG: Iteration num 12\nDEBUG: Iteration num 13\nDEBUG: Iteration num 14\nDEBUG: Iteration num 15\nDEBUG: Iteration num 16\nDEBUG: Iteration num 17\nDEBUG: Iteration num 18\nDEBUG: Iteration num 19\nDEBUG: Iteration num 20\nDEBUG: Iteration num 21\nDEBUG: Iteration num 22\nDEBUG: Iteration num 23\nDEBUG: Iteration num 24\nDEBUG: Iteration num 1\nDEBUG: Iteration num 2\nDEBUG: Iteration num 3\nDEBUG: Iteration num 4\nDEBUG: Iteration num 5\nDEBUG: Iteration num 6\nDEBUG: Iteration num 7\nDEBUG: Iteration num 8\nDEBUG: Iteration num 9\nDEBUG: Iteration num 10\nDEBUG: Iteration num 11\nDEBUG: Iteration num 12\nDEBUG: Iteration num 13\nDEBUG: Iteration num 14\nDEBUG: Iteration num 15\nDEBUG: Iteration num 16\nDEBUG: Iteration num 17\nDEBUG: Iteration num 18\nDEBUG: Iteration num 19\nDEBUG: Iteration num 20\nDEBUG: Iteration num 21\nDEBUG: Iteration num 22\nDEBUG: Iteration num 23\nDEBUG: Iteration num 24\nDEBUG: Iteration num 1\nDEBUG: Iteration num 2\nDEBUG: Iteration num 3\nDEBUG: Iteration num 4\nDEBUG: Iteration num 5\nDEBUG: Iteration num 6\nDEBUG: Iteration num 7\nDEBUG: Iteration num 8\nDEBUG: Iteration num 9\nDEBUG: Iteration num 10\nDEBUG: Iteration num 11\nDEBUG: Iteration num 12\nDEBUG: Iteration num 13\nDEBUG: Iteration num 14\nDEBUG: Iteration num 15\nDEBUG: Iteration num 16\nDEBUG: Iteration num 17\nDEBUG: Iteration num 18\nDEBUG: Iteration num 19\nDEBUG: Iteration num 20\nDEBUG: Iteration num 21\nDEBUG: Iteration num 22\nDEBUG: Iteration num 23\nDEBUG: Iteration num 24\nDEBUG: Iteration num 1\nDEBUG: Iteration num 2\nDEBUG: Iteration num 3\nDEBUG: Iteration num 4\nDEBUG: Iteration num 5\nDEBUG: Iteration num 6\nDEBUG: Iteration num 7\nDEBUG: Iteration num 8\nDEBUG: Iteration num 9\nDEBUG: Iteration num 10\nDEBUG: Iteration num 11\nDEBUG: Iteration num 12\nDEBUG: Iteration num 13\nDEBUG: Iteration num 14\nDEBUG: Iteration num 15\nDEBUG: Iteration num 16\nDEBUG: Iteration num 17\nDEBUG: Iteration num 18\nDEBUG: Iteration num 19\nDEBUG: Iteration num 20\nDEBUG: Iteration num 21\nDEBUG: Iteration num 22\n\n",
-            "visibility": "visible"
-        },
-        {
             "score": 0,
             "max_score": 0,
             "name": "test_extra_practice.py::test_largest_factor",
-            "output": "\nlargest_factor = <function largest_factor at 0x000002261DB304A0>\n\n    @with_import('extra_practice', 'largest_factor')\n    def test_largest_factor(largest_factor):\n        assert largest_factor(0) == 0\n>       assert largest_factor(2) == 1\n\ntest_extra_practice.py:7: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nn = 2\n\n    def largest_factor(n):\n        biggest_factor = 0\n        i = 0\n        while i < n:\n>           if n % i == 0:\nE           ZeroDivisionError: integer modulo by zero\n\nextra_practice.py:5: ZeroDivisionError",
+            "output": "\n",
             "visibility": "visible"
         },
         {
             "score": 0,
             "max_score": 0,
             "name": "test_extra_practice.py::test_missing_digits",
-            "output": "\nmissing_digits = <function missing_digits at 0x000002261DB30680>\n\n    @with_import('extra_practice', 'missing_digits')\n    def test_missing_digits(missing_digits):\n>       assert missing_digits(33) == 0\nE       assert -1 == 0\nE        +  where -1 = <function missing_digits at 0x000002261DB30680>(33)\n\ntest_extra_practice.py:20: AssertionError",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 10,
+            "max_score": 10,
+            "name": "test_square_root.py::test_square_root",
+            "output": "(2.6458, 23)\n\n",
             "visibility": "visible"
         }
     ]
