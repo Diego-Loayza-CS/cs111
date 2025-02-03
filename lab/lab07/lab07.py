@@ -2,7 +2,7 @@ import random
 
 
 def exception_maker():
-    raise ValueError
+    raise TypeError
 
 
 # QUESTION 1:
@@ -11,7 +11,10 @@ def exception_handler():
     If an exception is thrown/raised, then print out something like:
     "Exception caught! Exception type: <<put the type of the exception here>>"
     """
-    "*** YOUR CODE HERE ***"
+    try:
+        exception_maker()
+    except TypeError as e:
+        print(f"Exception caught! Exception type: {type(e)}")
 
 
 # QUESTION 2:
@@ -25,7 +28,7 @@ def in_range1(n):
     >>> in_range1(103)
     False
     """
-    "*** YOUR CODE HERE ***"
+    return 1 <= n <= 100
 
 
 # QUESTION 3:
@@ -33,7 +36,10 @@ def in_range2(n):
     """ Redo in_range1, but instead of returning False, raise a ValueError
     if n is outside the range of 1-100.
     """
-    "*** YOUR CODE HERE ***"
+    if 1 <= n <= 100:
+        return True
+    else:
+        raise ValueError
 
 
 def main():
@@ -43,6 +49,20 @@ def main():
     both functions.
     """
     "*** YOUR CODE HERE ***"
+    import random
+    n = 0
+    numbers = []
+    while n < 1000:
+        numbers.append(random.randint(1, 101))
+        n += 1
+
+    for number in numbers:
+        if not in_range1(number):
+            print(f"Number failed (for test 1): {number}")
+        try:
+            in_range2(number)
+        except ValueError as e:
+            print(f"Number failed: {number},  with error {type(e)}")
 
 
 # QUESTION 4:
@@ -58,7 +78,10 @@ def bound_checker(x_dimension, y_dimension, x, y):
         ...
     IndexError
     """
-    "*** YOUR CODE HERE ***"
+    if 0 <= x < x_dimension and 0 <= y < y_dimension:
+        return True
+    else:
+        raise IndexError
 
 
 # QUESTION 5 (OPTIONAL):
@@ -67,7 +90,12 @@ def validate_age(user_input):
     and return that integer. If the age is out of the accepted age range, raise a value error
     with the message "Age outside range!"
     """
-    "*** YOUR CODE HERE ***"
+    age = int(user_input)
+    if not 0 <= age <= 123:
+        raise ValueError ("Age outside range!")
+    return age
+
+
 
 
 def handle_user_input():
@@ -76,4 +104,9 @@ def handle_user_input():
     might be generated using a try/except block. If you catch/except a ValueError, print out something like:
     "Invalid Age: {user_input}. contains non-numerical characters!"
     """
-    "*** YOUR CODE HERE ***"
+    user_input = input("Enter your age: ")
+    try:
+        validate_age(user_input)
+    except ValueError as e:
+        print(f"Invalid Age: {user_input} contains non-numerical characters!")
+
