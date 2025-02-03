@@ -66,6 +66,7 @@ def main():
     # ABRIR ARCHIVO
     filename = "admission_algorithms_dataset.csv"
     input_file = open(filename, "r")
+    print("Processing " + filename + "...")
 
     # LISTAS DE SETS SIN HEADER
     data = input_file.readlines()
@@ -145,31 +146,12 @@ def main():
     with open("composite_chosen.csv", "w") as composite_chosen_file:
         a = 0
         while a < len(names):
-            print(f"""
-DEBUG:
-TEST FOR {a}
-
-{final_scores[a]} >= 6   or   {final_scores[a]}     with at least one of
-{is_outlier(raw_scores[a])} (is outlier: {raw_scores[a]})    or    {grade_outlier(semester_grades[a])}  (grade outlier: {semester_grades[a]})  or    {grade_improvement(semester_grades[a])} (grade improvement)
-
-which is
-{final_scores[a] >= 6 or final_scores[a] >= 5 and is_outlier(raw_scores[a]) or grade_outlier(semester_grades[a]) or grade_improvement(semester_grades[a])}
-        
-        
-            """)
-
             if final_scores[a] >= 6 or (final_scores[a] >= 5 and (is_outlier(raw_scores[a]) or grade_outlier(semester_grades[a]) or grade_improvement(semester_grades[a]))):
                 composite_chosen_file.writelines(f"{names[a]}\n")
             a += 1
 
 
-    print("Processing " + filename + "...")
-    # grab the line with the headers
-    headers = input_file.readline()
-
-    # TODO: loop through the rest of the file
-    # TODO: make sure to close all files you've opened!
-
+    input_file.close()
     print("done!")
 
 
