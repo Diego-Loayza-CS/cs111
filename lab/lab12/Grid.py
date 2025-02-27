@@ -1,5 +1,4 @@
 from copy import deepcopy
-from encodings.punycode import selective_find
 
 
 class Grid:
@@ -59,7 +58,7 @@ class Grid:
         if self.in_bounds(x, y):
             self.array[y][x] = val
         else:
-             raise IndexError
+            raise IndexError
 
     def __str__(self):
         return f"Grid({self.height}, {self.width}, first = {self.array[0][0]})"
