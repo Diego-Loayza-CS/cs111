@@ -23,7 +23,11 @@ def add_object(grid, object_type, x, y):
     :param x: the x coordinate to add the object to
     :param y: the y coordinate to add the object to
     """
-    pass
+    if grid.get(x, y) is not None:
+        return
+    obj = object_type(grid, x, y)
+    all_grid_objects.append(obj)
+    grid.set(x, y, obj)
 
 
 def remove_object(grid, x, y):
@@ -39,7 +43,10 @@ def remove_object(grid, x, y):
     :param x: the x coordinate to remove the object from
     :param y: the y coordinate to remove the object from
     """
-    pass
+    if not isinstance(grid.get(x, y), Particle):
+        return
+    all_grid_objects.remove(grid.get(x, y))
+    grid.set(x, y, None)
 
 
 def do_whole_grid():
@@ -55,6 +62,16 @@ def do_whole_grid():
     """
     all_grid_objects.sort(key=lambda particle: (particle.y, particle.x))
     """Write your code here"""
+    for item in all_grid_objects:
+        if isinstance(item, Bubble):
+            item.move()
+    all_grid_objects.reverse()
+    for item in all_grid_objects:
+        if isinstance(item, Sand):
+            item.move()
+    all_grid_objects.reverse()
+
+
 
 
 #########################################################

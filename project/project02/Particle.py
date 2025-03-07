@@ -8,8 +8,9 @@ class Particle:
         return f"{type(self).__name__}({self.x},{self.y})"
 
     def move(self):
-        if not self.physics():
+        physics = self.physics()
+        if physics is None:
             return
         self.grid.set(self.x, self.y, None)
-        self.x, self.y = self.physics()
+        self.x, self.y = physics
         self.grid.set(self.x, self.y, self)
