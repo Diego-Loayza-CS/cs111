@@ -1,5 +1,7 @@
-# Note: The Tree implemenation is at the bottom of the file
+# Note: The Tree implementation is at the bottom of the file
 # Please read the docstrings to learn how to interact with a Tree object.
+from operator import truediv
+
 
 def berry_finder(t):
     """Returns True if t contains a node with the value 'berry' and
@@ -18,7 +20,12 @@ def berry_finder(t):
     >>> berry_finder(t)
     True
     """
-    # Write your code here
+    if t.label == "berry":
+        return True
+    for branch in t.branches:
+        if berry_finder(branch):
+            return True
+    return False
 
 
 def height(t):
@@ -31,8 +38,10 @@ def height(t):
     >>> height(t)
     3
     """
-    # Write your code here
-
+    if t.is_leaf():
+        return 0
+    branch_height = max(height(branch) for branch in t.branches)
+    return 1 + branch_height
 
 def max_path_sum(t):
     """Return the maximum path sum of the Tree.
@@ -41,7 +50,10 @@ def max_path_sum(t):
     >>> max_path_sum(t)
     11
     """
-    # Write your code here
+    if t.is_leaf():
+        return t.label
+    branch_sum = max(max_path_sum(branch) for branch in t.branches)
+    return t.label + branch_sum
 
 
 def find_path(t, x):
@@ -51,13 +63,16 @@ def find_path(t, x):
     [2, 7, 6, 5]
     >>> find_path(t, 10)  # returns None
     """
-    # Highlight the code and press Ctrl-'/' to unccomment the code all at once
-    # if _____________________________:
-    #     return _____________________________
-    # _____________________________:
-    #     path = ______________________
-    #     if _____________________________:
-    #         return _____________________________
+    # Highlight the code and press Ctrl-'/' to uncomment the code all at once
+    if t.label == x:
+        return [x]
+    for branch in t.branches:
+        path = find_path(branch, x)
+        if path is not None:
+            return [t.label] + path
+
+    return None
+
 
 
 # Optional Question
@@ -92,7 +107,17 @@ def has_path(t, word):
     False
     """
     assert len(word) > 0, 'no path for empty word.'
-    # Write your code here
+    if t.label == word:
+        return True
+
+    if t.label == word[0]:
+        for branch in t.branches:
+            path = has_path(branch, word[1::])
+            if path is not False:
+                return True
+
+    return False
+
 
 
 class Tree:
@@ -121,7 +146,7 @@ class Tree:
         return f'Tree({self.label}{branch_str})'
 
     def __str__(self):
-    
+
         def indented(self):
             lines = []
             for b in self.branches:
@@ -130,4 +155,3 @@ class Tree:
             return [str(self.label)] + lines
 
         return '\n'.join(indented(self))
-
