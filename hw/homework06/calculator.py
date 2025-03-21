@@ -1,4 +1,4 @@
-from pair import *
+from pair import Pair, nil
 
 
 def tokenize(expression):
@@ -26,7 +26,6 @@ def tokenize(expression):
     return expression.split()
 
 
-# OPTIONAL
 def parse_tokens(tokens, index):
     """ Takes a list of tokens and an index and converts the tokens to a Pair list
 
